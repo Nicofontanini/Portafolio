@@ -1,0 +1,64 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HorizontalCard from "../components/HorizontalCard.astro";
+import { getCollection } from "astro:content";
+import createSlug from "../lib/createSlug"
+
+const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const last_posts = posts.slice(0, 3);
+---
+
+<BaseLayout sideBarActiveItemID="home">
+  <div class="pb-12 mt-5">
+    <div class="text-xl py-1">Hola!</div>
+    <div class="text-5xl font-bold">Soy Nico Fontanini</div>
+    <div class="text-3xl py-3 font-bold">Developer Web</div>
+    <div class="py-2">
+      <text class="text-lg">
+         <b>Full Stack Developer</b> con formación como Diseñador Web. Experiencia trabajando en Wordpress, NodeJS, React, Redux, SQL entre otras tecnologías del sector. Conocimientos en metodologías ágiles, GIT, estructura de datos, algoritmos, frameworks CSS. Con pensamiento creativo, resolución de problemas, trabajo en equipo, comunicación y autonomía.
+      </text>
+    </div>
+    <div class="mt-8">
+      <a class="btn" href="https://www.linkedin.com/in/nicolasfontanini/" target="_blank"> Contactame!</a>
+      <a href="https://github.com/Nicofontanini" target="_blank" class="btn btn-outline ml-5">
+        Codigos
+      </a>
+    </div>
+  </div>
+
+  <div>
+    <div class="text-3xl w-full font-bold mb-2">Ultimos Proyectos{"</>"}</div>
+  </div>
+
+  <HorizontalCard
+    title="Servicios Ya"
+    img="/ServiciosYa.png"
+    desc="App de gestion de ticket para servicio tecnico de tecnologia, facilita la interaccion entre cliente y tecnico."
+    url="https://youtu.be/Z3I0R4DllpU"
+    badge="Front-End React"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="NOA"
+    img="/screen.jpg"
+    desc="Aplicacion que ayuda a que jugadores de Videojuegos encuentren la pareja perfecta para jugar, Match, Chat en Vivo, etc."
+    url="#"
+    badge="Full-Stack Js"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Pinta Futbol"
+    img="/futbol.png"
+    desc="Colabora a que los equipos de futbol completen su equipo, con un sistema de match, con localizacion en tiempo real y limitada segun zona de conveniencia, sistema de mensajeria, etc."
+    url="https://youtu.be/aUQOI_QKeNU"
+    badge="Front-End React"
+  />
+    <HorizontalCard
+    title="AlmarTranfer"
+    img="/almatranfer.jpg"
+    desc="Sitio para reservas de tranfers, contrata con anticipacion, selecciona fecha, horario, servicios extras y categoria del vehiculo, elegi tu tranfer desde el areopuerto hasta tu destino en la Rivera Maya."
+    url="https://www.almartransferscancun.com/"
+    badge="Wordpress"
+  />
+</BaseLayout>

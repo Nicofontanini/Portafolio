@@ -1,0 +1,98 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TimeLineElement from "../components/cv/TimeLine.astro";
+---
+
+<BaseLayout title="CV Nicolas Fontanini" sideBarActiveItemID="cv">
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Perfil</div>
+  </div>
+
+  <div class="mb-10 text-justify">
+    Desarrollador Web Fullstack con orientacion a Front-End con <b>React & Wordpress</b>.
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Educacón</div>
+  </div>
+
+  <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement
+      title="Tecnicatura Uni. Inf. aplicada al diseño multimedia y sitios web"
+      subtitle="[Febrero - 2023] a [Actualidad] en [UNL], [Santa Fe], [Argentina]"
+    />
+    <TimeLineElement
+      title="React Web Developer"
+      subtitle="[Enero - 2023] a [Diciembre 2023] a [UTN], [Buenos Aires], [Argentina]"
+    /> 
+    <TimeLineElement
+      title="FullStack Javascript"
+      subtitle="[Enero - 2022] a [Diciembre 2022] a [OpenBootcamp], [Barcelona], [España]"
+    />
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Experiencia</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="Desarrollo Web, Creacion contenido educativo"
+      subtitle="De [Diciembre 2023] a [Mayo 2024] en [Programee], [Barcelona], [España]"
+    >
+     Mi rol principal consistía en la creación y desarrollo de contenido educativo integral para cursos de programación, centrados en temas fundamentales del desarrollo web como JavaScript, HTML, CSS y React.
+     Mi objetivo era proporcionar una experiencia de aprendizaje completa y efectiva, tanto para docentes como para alumnos, facilitando la adquisición de habilidades en el desarrollo web a través de contenido estructurado y recursos de alta calidad.
+
+    </TimeLineElement>
+    <TimeLineElement
+      title="Freelance"
+      subtitle="[Actualidad] en [AlmarTranfer] de [Argentina-Mexico], [Club Claypole] de [Argentina]",
+    >
+      Como desarrollador web freelance, he trabajado en proyectos que abarcan desde sistemas de reservas hasta la gestión de socios. Mis habilidades técnicas y mi capacidad para entregar proyectos de alta calidad me permiten ofrecer un valor significativo a cada cliente.
+    </TimeLineElement>
+    <TimeLineElement
+      title="Full Stack Developer Web"
+      subtitle="De [Enero 2024] a [Junio 2024] en [No Country], [Buenos Aires], [Argentina]"
+    >
+      Me desempeñe como desarrollador web en front-end y back-end, trabajando con equipos multidisciplinarios. He participado en diversos proyectos, utilizando tecnologías como React, Next.js y Node.js. Fui elegido por mis compañeros para ocupar el rol de Tech Lead del front-end en uno de estos proyectos debido a mi liderazgo y habilidades técnicas.
+    </TimeLineElement>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Certifications</div>
+  </div>
+
+  <ul class="list-disc mx-6 mb-10 grid gap-2">
+   <li>
+      <a href="https://drive.google.com/file/d/1ji333kcBAryB3r3mjJJyQgKuzbTKCkJg/view?usp=drive_link" target="_blank"> No Country</a>
+    </li>
+    <li>
+      <a href="https://drive.google.com/file/d/1wPQrZXsLB4eVCYPsT7T2Sb5J5NhX1Wfo/view?usp=drive_link" target="_blank">Desarrollador Web Con React Js</a>
+    </li>
+    <li>
+      <a href="https://drive.google.com/file/d/16dhqOb-4LJkUW0J_BbPTyQ-HE95mtu11/view?usp=drive_link" target="_blank"> Javascript FullStack</a>
+    </li>
+  </ul>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Skills</div>
+  </div>
+
+  <ul class="list-disc md:columns-5 columns-2 mx-6">
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>Less</li>
+    <li>Boostrap</li>
+    <li>Javascript</li>
+    <li>React</li>
+    <li>Redux</li>
+    <li>Node.js</li>
+    <li>Express</li>
+    <li>SQL</li>
+    <li>WordPress</li>
+    <li>Premier Pro</li>
+    <li>Figma</li>
+    <li>Github</li>
+     <li>Trello</li>
+  </ul>
+</BaseLayout>
